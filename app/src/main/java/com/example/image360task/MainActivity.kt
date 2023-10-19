@@ -44,7 +44,9 @@ class MainActivity : AppCompatActivity() {
         faceposition()
         createCameraManager()
         checkForPermission()
-
+        binding.btnSwitch.setOnClickListener {
+            MainActivity.storeAllfaceBitmap(this)
+        }
     }
 
 

@@ -70,7 +70,8 @@ class FaceContourDetectionProcessor(private val view: GraphicOverlay, val contex
 
                     if (it.headEulerAngleY < 50 && it.headEulerAngleY > 10 && facevalue.equals("left")) {
 
-                        MainActivity.storeAllfaceBitmap(context)
+                      //  MainActivity.storeAllfaceBitmap(context)
+                        MainActivity.binding.btnSwitch.visibility=View.VISIBLE
 
 
                     } else if (it.headEulerAngleY < -10 && it.headEulerAngleY > -50 && facevalue.equals(
@@ -78,7 +79,8 @@ class FaceContourDetectionProcessor(private val view: GraphicOverlay, val contex
                         )
                     ) {
 
-                        MainActivity.storeAllfaceBitmap(context)
+                     //   MainActivity.storeAllfaceBitmap(context)
+                        MainActivity.binding.btnSwitch.visibility=View.VISIBLE
                         Log.v("position", "positionrr=" + MainActivity.store360img)
 
 
@@ -87,7 +89,8 @@ class FaceContourDetectionProcessor(private val view: GraphicOverlay, val contex
                         )
                     ) {
                         //  MainActivity.binding.btnSwitch.visibility = View.VISIBLE
-                        MainActivity.storeAllfaceBitmap(context)
+                      //  MainActivity.storeAllfaceBitmap(context)
+                        MainActivity.binding.btnSwitch.visibility=View.VISIBLE
                         // MainActivity.store360img++
 
 
@@ -96,7 +99,8 @@ class FaceContourDetectionProcessor(private val view: GraphicOverlay, val contex
                         )
                     ) {
 
-                        MainActivity.storeAllfaceBitmap(context)
+                        //MainActivity.storeAllfaceBitmap(context)
+                        MainActivity.binding.btnSwitch.visibility=View.VISIBLE
                         Log.v("position", "positiondd=" + MainActivity.store360img)
 
 
@@ -105,8 +109,8 @@ class FaceContourDetectionProcessor(private val view: GraphicOverlay, val contex
                         var prob = getSmileProbability(it)
                         if (prob != null) {
                             if (prob >= 0.5) {
-
-                                MainActivity.storeAllfaceBitmap(context)
+                                MainActivity.binding.btnSwitch.visibility = View.VISIBLE
+                           //     MainActivity.storeAllfaceBitmap(context)
 
 
                             } else {
